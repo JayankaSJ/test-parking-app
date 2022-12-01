@@ -1,0 +1,59 @@
+.booking .buttons {
+    margin-top: 3em;
+    margin-bottom: 2em;
+}
+
+.booking .buttons .ant-btn{
+    margin-right: 3em;
+}
+
+
+
+.view-parking {
+    flex: 2;
+}
+
+.view-parking .areas {
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+.view-parking .areas .ant-btn {
+    margin-bottom: 1em;
+}
+
+.view-parking .slots .slot:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+.view-parking .slots .slot .slot-inner {
+    border: 2px #cbcbcb solid;
+    height: 150px;
+    line-height: 150px;
+    font-size: 13px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.view-parking .slots .slot .slot-hidden {
+    visibility: hidden;
+}
+
+.view-parking .slots .slot .slot-allocated {
+    background: #f1aeae;;
+    background-image: repeating-linear-gradient(327deg, rgb(179 179 179 / 25%), rgb(96 96 96 / 50%) 1px, #2c2c2c00 1px, transparent 6px);
+    background-size: 4px 4px;
+}
+
+.book-parking .ant-picker {
+    width: 100%;
+}
+
+.book-parking .btn-book-parking {
+    width: 100%;
+    margin-top: 1em;
+}
+

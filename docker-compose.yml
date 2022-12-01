@@ -1,0 +1,36 @@
+version: "3"
+services:
+    mongo:
+        container_name: mongo
+        image: mongo:6.0.3
+        restart: always
+        ports:
+            - '27017:27017'
+        entrypoint: ["/usr/bin/mongod", "--bind_ip_all", "--replSet", "rs0"]
+        healthcheck:
+            test: mongosh --eval "rs.initiate()"
+            start_period: 5s
+    backend:
+        container_name: backend
+        image: backend:latest
+        restart: always
+        build: ./backend
+        ports:
+            - "8001:8001"
+        environment:
+            - NODE_ENV=production
+            - SECRET=super-secret
+            - PORT=8001
+            - MONGODB_URI=mongodb://mongo:27017/lucytech?retryWrites=false&replicaSet=rs0
+        depends_on:
+            - mongo
+    frontend:
+        container_name: frontend
+        image: frontend:latest
+        restart: always
+        build: ./frontend
+        ports:
+            - "3000:3000"
+        depends_on:
+            - backend
+
