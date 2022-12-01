@@ -1,0 +1,19 @@
+
+.index-content {
+    margin-top: 3em;
+    margin-bottom: 2em;
+}
+
+.index-content .head-title {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.index-content .head-title h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.index-content .logout-button {
+    float: right;
+    height: 100%;
+    min-width: 100px;
+}
