@@ -13,6 +13,6 @@ const config = {
 
 
 exports.get = function get(env) {
-    console.log('environment: ' + env)
+    console.log(`environment: ${env}`)
     return config[env] || config.default
 }

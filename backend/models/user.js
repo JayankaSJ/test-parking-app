@@ -33,11 +33,8 @@ userSchema.pre('save', function (next) {
     if (user.isModified('password')) {
         const hash = crypto.createHash('sha256').update(user.password).digest('hex');
         user.password = hash;
-        next();
     }
-    else {
-        next();
-    }
+    next();
 });
 
 userSchema.methods.comparePassword = function (password, cb) {

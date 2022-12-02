@@ -11,17 +11,16 @@ const mongooseConfig = {
     useCreateIndex: true
 };
 
-mongoose.Promise = global.Promise;
-mongoose.connect(db.DATABASE, mongooseConfig, function (err) {
-    if (err) {
-        console.log(err);
-    }
-    else {
-        console.log("database is connected");
-    }
-});
-
 (async () => {
+    mongoose.Promise = global.Promise;
+    mongoose.connect(db.DATABASE, mongooseConfig, function (err) {
+        if (err) {
+            console.log(err);
+        }
+        else {
+            console.log("database is connected");
+        }
+    });
 
     await mongoose.connection.dropDatabase();
 
@@ -130,6 +129,7 @@ mongoose.connect(db.DATABASE, mongooseConfig, function (err) {
         virtualIndex: 0
     }));
 
+    // define the virtual index
     slots.forEach(item => {
         const currentIndex = slots
             .filter(i => i.areaId === item.areaId && i.isEnabled)

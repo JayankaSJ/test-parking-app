@@ -8,8 +8,8 @@ const app = express();
 
 const db = require('./config').get(process.env.NODE_ENV);
 const routes = require('./routes');
-const globalErrorHandler = require('./middlewares/globalErrorHandler');
-const globalResponseHandler = require('./middlewares/globalResponseHandler');
+const globalErrorHandler = require('./middleware/globalErrorHandler');
+const globalResponseHandler = require('./middleware/globalResponseHandler');
 
 // app use
 app.use(cors())

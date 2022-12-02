@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const { authenticate } = require('../middlewares/authenticate');
+const { authenticate } = require('../middleware/authenticate');
 
 const authRouter = require('./auth.router');
 const slotsRouter = require('./slots.router');
