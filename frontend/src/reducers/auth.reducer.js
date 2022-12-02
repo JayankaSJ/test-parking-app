@@ -4,7 +4,7 @@ const initialState = {
     isAuthenticated: false,
     user: {
         id: null,
-        name: null
+        email: null
     }
 };
 
