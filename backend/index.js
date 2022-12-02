@@ -42,7 +42,7 @@ mongoose.connect(db.DATABASE, mongooseConfig, function (err) {
 });
 
 // listening port
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 8001;
 app.listen(PORT, () => {
     console.log(`app is live at ${PORT}`);
 });

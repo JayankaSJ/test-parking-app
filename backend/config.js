@@ -7,7 +7,7 @@ const config = {
     default: {
         SECRET: 'super-secret',
         SALT: 10,
-        DATABASE: 'mongodb://127.0.0.1:27017/lucytech?retryWrites=false&replicaSet=rs0'
+        DATABASE: 'mongodb://localhost:27017/lucytech?retryWrites=false&replicaSet=rs0'
     }
 }
 
